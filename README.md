@@ -15,6 +15,11 @@
 
 Full docs ISO: https://github.com/eocode/ISO8583-Dlib/blob/master/8583.pdf
 
+About ISO Links: 
+
+* https://es.wikipedia.org/wiki/ISO_8583
+* https://www.chileoffshore.com/es/interesting-articles/115-todo-sobre-iso8583
+
 Resume Docs and Parser Example
 
 <div align="center">

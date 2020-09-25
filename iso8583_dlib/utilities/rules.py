@@ -1,5 +1,12 @@
 def data_elements_rules():
     return {
+        0: {
+            "dynamic": False,
+            "len": 0,
+            "format": 'AN',
+            "start_position": 0,
+            "end_position": 0,
+        },
         1: {
             "dynamic": False,
             "len": 16,
