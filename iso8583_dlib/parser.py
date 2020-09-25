@@ -14,6 +14,7 @@ class Parser:
         self.mti = self.message[12:16]  # 4
         self.primary_bitmap = self.message[16:32]  # 16
         self.data_elements = self.message[32:]
+        self.json_data = None
 
     def iso_8583(self):
 
@@ -28,3 +29,13 @@ class Parser:
         print('Data Elements')
         # print(self.data_elements)
         print(data_elements_rules()[3])
+
+    def get_json(self):
+        to_convert = {
+            "iso": self.iso,
+            "header": self.header,
+            "mti": self.mti,
+            "primary_bitmap": self.primary_bitmap,
+            "data_elements": self.data_elements
+        }
+        return json.dumps(to_convert)
