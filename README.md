@@ -13,7 +13,9 @@
 
 ## Docs
 
-Docs and Parser Example
+Full docs ISO: https://github.com/eocode/ISO8583-Dlib/blob/master/8583.pdf
+
+Resume Docs and Parser Example
 
 <div align="center">
   <img src="img/ISO%208583.png">
