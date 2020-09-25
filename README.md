@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="64" src="img/isologo.png">
+  <img width="64" src="img/logo.png">
   <h3 align="center">ISO8583 Dlib Parser</h3>
   <p align="center">
     Parser String to JSON for ISO8583 Package
