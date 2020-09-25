@@ -1,8 +1,7 @@
 """ISO 8583 Parser implementation"""
 
 import json
-from iso8583_dlib.utilities.operations import hex_to_binary
-from iso8583_dlib.utilities.rules import data_elements_rules
+from iso8583_dlib.utilities.operations import convert_bitmap_to_active_bits
 from iso8583_dlib.segments.iso import ISO
 from iso8583_dlib.segments.header import Header
 from iso8583_dlib.segments.mti import MTI
@@ -21,10 +20,10 @@ class Parser:
         self.json_data = None
 
         # Parser segments
-        self.iso = self.message[ISO.start_position:ISO.end_position]  # 3
-        self.header = self.message[Header.start_position:Header.end_position]  # 9
-        self.mti = self.message[MTI.start_position:MTI.end_position]  # 4
-        self.primary_bitmap = self.message[PrimaryBitmap.start_position:PrimaryBitmap.end_position]  # 16
+        self.iso = self.message[ISO.start_position:ISO.end_position]
+        self.header = self.message[Header.start_position:Header.end_position]
+        self.mti = self.message[MTI.start_position:MTI.end_position]
+        self.primary_bitmap = self.message[PrimaryBitmap.start_position:PrimaryBitmap.end_position]
         self.data_elements = self.message[DataElements.start_position:]
 
         # Parser function
@@ -33,26 +32,20 @@ class Parser:
     def iso_8583(self):
         """Processing data"""
 
-        position = 1
-        for element in self.primary_bitmap:
-            for bit in hex_to_binary(element):
-                if bit == '1':
-                    self.active_data_elements.append(position)
-                position += 1
+        self.active_data_elements = convert_bitmap_to_active_bits(self.primary_bitmap)
 
-        print(self.active_data_elements)
-        print('Data Elements')
-        # print(self.data_elements)
-        print(data_elements_rules()[3])
-
-    def get_json(self):
+    def get_json(self, save=False):
         """Return json format data"""
-
+        print(self.active_data_elements)
         to_convert = {
-            "iso": self.iso,
-            "header": self.header,
-            "mti": MTI.message_types[self.mti],
+            "literal": self.iso,
+            "header": Header.get_message(self.header),
+            "mti": MTI.get_type(self.mti),
             "primary_bitmap": self.primary_bitmap,
-            "data_elements": self.data_elements
+            "data_elements": DataElements.get_all_data_elements(self.active_data_elements, self.data_elements)
         }
+        if save:
+            with open('data.json', 'w', encoding='utf-8') as f:
+                json.dump(to_convert, f, ensure_ascii=False, indent=4)
+
         return json.dumps(to_convert)

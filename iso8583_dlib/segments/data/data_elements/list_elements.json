@@ -1,0 +1,47 @@
+{
+  "0": {
+    "element": 0,
+    "description": "",
+    "dynamic": false,
+    "len": 0,
+    "format": "AN",
+    "start_position": 0,
+    "end_position": 0
+  },
+  "1": {
+    "element": 1,
+    "description": "Bitmap Secondary",
+    "dynamic": false,
+    "len": 16,
+    "format": "AN",
+    "start_position": 0,
+    "end_position": 16
+  },
+  "3": {
+    "element": 3,
+    "description": "Processing Code",
+    "dynamic": false,
+    "len": 6,
+    "format": "N",
+    "start_position": 16,
+    "end_position": 22
+  },
+  "4": {
+    "element": 4,
+    "description": "Transaction Amount",
+    "dynamic": false,
+    "len": 12,
+    "format": "N",
+    "start_position": 22,
+    "end_position": 34
+  },
+  "7": {
+    "element": 7,
+    "description": "Transmission Date and Time",
+    "dynamic": false,
+    "len": 10,
+    "format": "N",
+    "start_position": 22,
+    "end_position": 34
+  }
+}

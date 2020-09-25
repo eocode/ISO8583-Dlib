@@ -9,7 +9,7 @@ Parser String to JSON for ISO8583 Package
 </a>
 </p>
 
-This package has been developed  with a cookiecutter made by eocode author in: https://github.com/ActivandoIdeas/Python-Package-Cookiecutter
+This package has been developed  with a cookiecutter made for me in: https://github.com/ActivandoIdeas/Python-Package-Cookiecutter
 
 ## Docs
 

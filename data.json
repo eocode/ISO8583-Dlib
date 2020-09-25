@@ -1,0 +1,69 @@
+{
+    "literal": "ISO",
+    "header": {
+        "Complete_header": "026000070",
+        "Product_indicator": {
+            "value": "02",
+            "description": "POS"
+        },
+        "Release_number": {
+            "value": "60",
+            "description": "DEFAULT"
+        },
+        "Status": {
+            "value": "000",
+            "description": "Undetermined"
+        },
+        "Originator_code": {
+            "value": "7",
+            "description": "Interchange"
+        },
+        "Responder_code": {
+            "value": "0",
+            "description": "Undetermined"
+        }
+    },
+    "mti": {
+        "value": "0200",
+        "description": "Financial transaction request"
+    },
+    "primary_bitmap": "B23E842128A1801A",
+    "data_elements": [
+        {
+            "element": 1,
+            "description": "Bitmap Secondary",
+            "dynamic": false,
+            "len": 16,
+            "format": "AN",
+            "start_position": 0,
+            "end_position": 16
+        },
+        {
+            "element": 3,
+            "description": "Processing Code",
+            "dynamic": false,
+            "len": 6,
+            "format": "N",
+            "start_position": 16,
+            "end_position": 22
+        },
+        {
+            "element": 4,
+            "description": "Transaction Amount",
+            "dynamic": false,
+            "len": 12,
+            "format": "N",
+            "start_position": 22,
+            "end_position": 34
+        },
+        {
+            "element": 7,
+            "description": "Transmission Date and Time",
+            "dynamic": false,
+            "len": 10,
+            "format": "N",
+            "start_position": 22,
+            "end_position": 34
+        }
+    ]
+}
