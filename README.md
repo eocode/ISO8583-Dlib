@@ -42,19 +42,48 @@ from ISO8583-Dlib.parser import Parser
 
 message = "ISO0260000100200B23E842128A1801A00000000100000BC0010000000000070020707203500000013153459070724050707070705161199999999999274231453201761925=2405226096000000000619P0891218        INBURSA CASHBACK      CD MEXICO    001MX0277126834            00010101484016B036PRO1+0000000019B359    00000000000370& 0000700370! C000026              113000       ! C400012 000000021082! Q200002 03! B200158 7FF900008000800080008251FFC4F2FDE21D0000000070020000000000003C00002A48448420070700BE967302000706010A03A4B80200000"
 data = Parser(message)
+# Set true to generate a data.json file with parser message
+print(data.get_json(save=True))
 ```
 
 The output is a json
 
 ```json
 {
-  "iso": "ISO", 
-  "header": "026000010", 
-  "mti": "0200", 
-  "primary_bitmap": "B23E842128A1801A", 
-  "data_elements": ""
+    "literal": "ISO",
+    "header": {
+        "Complete_header": "026000070",
+        "Product_indicator": {
+            "value": "02",
+            "description": "POS"
+        },
+        "Release_number": {
+            "value": "60",
+            "description": "DEFAULT"
+        },
+        "Status": {
+            "value": "000",
+            "description": "Undetermined"
+        },
+        "Originator_code": {
+            "value": "7",
+            "description": "Interchange"
+        },
+        "Responder_code": {
+            "value": "0",
+            "description": "Undetermined"
+        }
+    },
+    "mti": {
+        "value": "0200",
+        "description": "Financial transaction request"
+    },
+    "primary_bitmap": "B23E842128A1801A",
+    "...": "..."
 }
 ```
+
+Full output message: https://github.com/eocode/ISO8583-Dlib/blob/master/data.json
 
 ## Test this project
 
