@@ -33,6 +33,8 @@ With pip
 
 ## Basic Usage
 
+The entry is a message
+
 ```python
 from ISO8583-Dlib.parser import Parser
 
@@ -40,6 +42,18 @@ message = "ISO0260000100200B23E842128A1801A00000000100000BC001000000000007002070
 data = Parser(message)
 data.iso_8583()
 print(data.get_json())
+```
+
+The output is a json
+
+```json
+{
+  "iso": "ISO", 
+  "header": "026000010", 
+  "mti": "0200", 
+  "primary_bitmap": "B23E842128A1801A", 
+  "data_elements": ""
+}
 ```
 
 ## Test this project
