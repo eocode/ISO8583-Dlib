@@ -14,7 +14,7 @@ class DataElements:
     def get_all_data_elements(active_elements, data_elements):
         data = [{"Active_elements": active_elements}]
         for i in active_elements:
-            # Only support the first seven data elements
+            # Only support some data elements
             if i <= 14:
                 element = DataElements.process_element(DataElements.get_element(i), data_elements)
                 data.append(element)
