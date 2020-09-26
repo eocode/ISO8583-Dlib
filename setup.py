@@ -12,7 +12,7 @@ project_urls = {
 
 setuptools.setup(
     name='ISO8583-Dlib',
-    version='0.1.2',
+    version='0.1.3',
     author='eocode',
     author_email='hola@eliasojedamedina.com',
     license='MIT license',
@@ -27,6 +27,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     project_urls=project_urls,
+    include_package_data=True,
     install_requires=[],
     python_requires=">=3.6",
 )

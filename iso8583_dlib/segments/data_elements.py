@@ -8,7 +8,7 @@ class DataElements:
 
     @staticmethod
     def get_element(select):
-        return read_json_to_dictionary(r'\data\data_elements\list_elements.json')[select]
+        return read_json_to_dictionary(r'data\data_elements\list_elements.json')[select]
 
     @staticmethod
     def get_all_data_elements(active_elements, data_elements):

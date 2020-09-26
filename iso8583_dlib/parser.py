@@ -36,7 +36,6 @@ class Parser:
 
     def get_json(self, save=False):
         """Return json format data"""
-        print(self.active_data_elements)
         to_convert = {
             "literal": self.iso,
             "header": Header.get_message(self.header),

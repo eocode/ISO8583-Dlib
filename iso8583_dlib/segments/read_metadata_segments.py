@@ -1,9 +1,10 @@
+"""Read metadata segments"""
 import json
-import os
+import pkgutil
 
 
 def read_json_to_dictionary(path):
-    file = os.getcwd() + r'\iso8583_dlib\segments' + path
+    file = 'iso8583_dlib/segments/' + path
     try:
         f = open(file, 'r')
         data = json.load(f)

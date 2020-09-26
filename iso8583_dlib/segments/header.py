@@ -9,23 +9,23 @@ class Header:
 
     @staticmethod
     def get_header_pi(select):
-        return read_json_to_dictionary(r'\data\header\header_PI.json')[select]
+        return read_json_to_dictionary(r'data\header\header_PI.json')[select]
 
     @staticmethod
     def get_header_rn(select):
-        return read_json_to_dictionary(r'\data\header\header_RN.json')[select]
+        return read_json_to_dictionary(r'data\header\header_RN.json')[select]
 
     @staticmethod
     def get_header_status(select):
-        return read_json_to_dictionary(r'\data\header\header_Status.json')[select]
+        return read_json_to_dictionary(r'data\header\header_Status.json')[select]
 
     @staticmethod
     def get_header_oc(select):
-        return read_json_to_dictionary(r'\data\header\header_OC.json')[select]
+        return read_json_to_dictionary(r'data\header\header_OC.json')[select]
 
     @staticmethod
     def get_header_rc(select):
-        return read_json_to_dictionary(r'\data\header\header_RC.json')[select]
+        return read_json_to_dictionary(r'data\header\header_RC.json')[select]
 
     @staticmethod
     def get_message(header):

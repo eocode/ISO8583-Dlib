@@ -8,4 +8,4 @@ class MTI:
 
     @staticmethod
     def get_type(select):
-        return read_json_to_dictionary(r'\data\mti\mti_types.json')[select]
+        return read_json_to_dictionary(r'data\mti\mti_types.json')[select]
