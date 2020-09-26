@@ -109,3 +109,8 @@ Easy library for use, create an specific API with your favorite framework and in
 ## How to contribute
 
 Read CONTRIBUTTING.md file and make an issue and send a PR to improve
+
+## Other implementations
+
+* https://github.com/arthurhenrique/iso-8583
+* https://github.com/search?q=iso-8583
