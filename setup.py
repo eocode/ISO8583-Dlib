@@ -12,7 +12,7 @@ project_urls = {
 
 setuptools.setup(
     name='ISO8583-Dlib',
-    version='0.1.3',
+    version='0.1.5',
     author='eocode',
     author_email='hola@eliasojedamedina.com',
     license='MIT license',

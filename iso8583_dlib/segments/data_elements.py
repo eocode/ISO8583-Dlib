@@ -1,5 +1,5 @@
 """Fifth segment"""
-from .read_metadata_segments import read_json_to_dictionary
+from .data.data_elements import list_elements
 from .utilities.operations import convert_bitmap_to_active_bits
 
 
@@ -8,7 +8,7 @@ class DataElements:
 
     @staticmethod
     def get_element(select):
-        return read_json_to_dictionary(r'data\data_elements\list_elements.json')[select]
+        return list_elements.elements[select]
 
     @staticmethod
     def get_all_data_elements(active_elements, data_elements):
@@ -16,7 +16,7 @@ class DataElements:
         for i in active_elements:
             # Only support the first seven data elements
             if i <= 14:
-                element = DataElements.process_element(DataElements.get_element(str(i)), data_elements)
+                element = DataElements.process_element(DataElements.get_element(i), data_elements)
                 data.append(element)
                 pass
         return data

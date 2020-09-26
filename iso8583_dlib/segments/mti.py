@@ -1,5 +1,5 @@
 """Third segment"""
-from .read_metadata_segments import read_json_to_dictionary
+from .data.mti import mti_types
 
 
 class MTI:
@@ -8,4 +8,4 @@ class MTI:
 
     @staticmethod
     def get_type(select):
-        return read_json_to_dictionary(r'data\mti\mti_types.json')[select]
+        return mti_types.types[select]

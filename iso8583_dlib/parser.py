@@ -31,7 +31,6 @@ class Parser:
 
     def iso_8583(self):
         """Processing data"""
-
         self.active_data_elements = convert_bitmap_to_active_bits(self.primary_bitmap)
 
     def get_json(self, save=False):

@@ -1,6 +1,6 @@
 """Second segment"""
 
-from .read_metadata_segments import read_json_to_dictionary
+from .data.header import header_PI, header_RN, header_Status, header_OC, header_RC
 
 
 class Header:
@@ -9,23 +9,23 @@ class Header:
 
     @staticmethod
     def get_header_pi(select):
-        return read_json_to_dictionary(r'data\header\header_PI.json')[select]
+        return header_PI.pi[select]
 
     @staticmethod
     def get_header_rn(select):
-        return read_json_to_dictionary(r'data\header\header_RN.json')[select]
+        return header_RN.rn[select]
 
     @staticmethod
     def get_header_status(select):
-        return read_json_to_dictionary(r'data\header\header_Status.json')[select]
+        return header_Status.status[select]
 
     @staticmethod
     def get_header_oc(select):
-        return read_json_to_dictionary(r'data\header\header_OC.json')[select]
+        return header_OC.oc[select]
 
     @staticmethod
     def get_header_rc(select):
-        return read_json_to_dictionary(r'data\header\header_RC.json')[select]
+        return header_RC.rc[select]
 
     @staticmethod
     def get_message(header):
