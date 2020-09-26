@@ -1,6 +1,6 @@
 """Fifth segment"""
-from iso8583_dlib.segments.read_metadata_segments import read_json_to_dictionary
-from iso8583_dlib.utilities.operations import convert_bitmap_to_active_bits
+from .read_metadata_segments import read_json_to_dictionary
+from .utilities.operations import convert_bitmap_to_active_bits
 
 
 class DataElements:

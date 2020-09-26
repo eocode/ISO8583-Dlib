@@ -1,5 +1,5 @@
 """Third segment"""
-from iso8583_dlib.segments.read_metadata_segments import read_json_to_dictionary
+from .read_metadata_segments import read_json_to_dictionary
 
 
 class MTI:

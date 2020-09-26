@@ -1,12 +1,12 @@
-"""ISO 8583 Parser implementation"""
+"""Main Parser Class"""
 
 import json
-from iso8583_dlib.utilities.operations import convert_bitmap_to_active_bits
-from iso8583_dlib.segments.iso import ISO
-from iso8583_dlib.segments.header import Header
-from iso8583_dlib.segments.mti import MTI
-from iso8583_dlib.segments.primary_bitmap import PrimaryBitmap
-from iso8583_dlib.segments.data_elements import DataElements
+from .segments.utilities.operations import convert_bitmap_to_active_bits
+from .segments.iso import ISO
+from .segments.header import Header
+from .segments.mti import MTI
+from .segments.primary_bitmap import PrimaryBitmap
+from .segments.data_elements import DataElements
 
 
 class Parser:
