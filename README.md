@@ -96,6 +96,16 @@ pytest
 
 Easy library for use, create an specific API with your favorite framework and integrate with other systems
 
+## To Do
+
+* Validate in real use
+* Valid output
+* Complement json rules to process all Data Elements
+* Add logic for variable Data Elements
+* Add other output formats
+* Add other input formats
+* Make validations with a library as https://pydantic-docs.helpmanual.io/usage/validators or a simple implementation
+
 ## How to contribute
 
 Read CONTRIBUTTING.md file and make an issue and send a PR to improve

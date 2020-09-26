@@ -11,8 +11,7 @@ def hex_to_binary(string):
     return b_str.zfill(4)
 
 
-def convert_bitmap_to_active_bits(bitmap):
-    position = 1
+def convert_bitmap_to_active_bits(bitmap, position=1):
     active_bits = []
     for element in bitmap:
         for bit in hex_to_binary(element):

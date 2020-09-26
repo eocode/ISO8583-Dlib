@@ -3,8 +3,9 @@
     "element": 0,
     "description": "",
     "dynamic": false,
+    "bitmap": false,
     "len": 0,
-    "format": "AN",
+    "format": "",
     "start_position": 0,
     "end_position": 0
   },
@@ -12,6 +13,7 @@
     "element": 1,
     "description": "Bitmap Secondary",
     "dynamic": false,
+    "bitmap": true,
     "len": 16,
     "format": "AN",
     "start_position": 0,
@@ -21,6 +23,7 @@
     "element": 3,
     "description": "Processing Code",
     "dynamic": false,
+    "bitmap": false,
     "len": 6,
     "format": "N",
     "start_position": 16,
@@ -30,6 +33,7 @@
     "element": 4,
     "description": "Transaction Amount",
     "dynamic": false,
+    "bitmap": false,
     "len": 12,
     "format": "N",
     "start_position": 22,
@@ -39,9 +43,50 @@
     "element": 7,
     "description": "Transmission Date and Time",
     "dynamic": false,
+    "bitmap": false,
     "len": 10,
     "format": "N",
-    "start_position": 22,
-    "end_position": 34
+    "start_position": 34,
+    "end_position": 44
+  },
+  "11": {
+    "element": 11,
+    "description": "Systems Trace Audit Number",
+    "dynamic": false,
+    "bitmap": false,
+    "len": 6,
+    "format": "N",
+    "start_position": 44,
+    "end_position": 50
+  },
+  "12": {
+    "element": 12,
+    "description": "Local Transaction Time",
+    "dynamic": false,
+    "bitmap": false,
+    "len": 6,
+    "format": "N",
+    "start_position": 50,
+    "end_position": 56
+  },
+    "13": {
+    "element": 13,
+    "description": "Local Transaction Date",
+    "dynamic": false,
+    "bitmap": false,
+    "len": 4,
+    "format": "N",
+    "start_position": 56,
+    "end_position": 60
+  },
+    "14": {
+    "element": 14,
+    "description": "Settlement Date",
+    "dynamic": false,
+    "bitmap": false,
+    "len": 4,
+    "format": "N",
+    "start_position": 60,
+    "end_position": 64
   }
 }
