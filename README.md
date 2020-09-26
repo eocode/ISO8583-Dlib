@@ -1,4 +1,4 @@
-<img width="64" src="https://github.com/eocode/ISO8583-Dlib/tree/master/img/logo.png">
+<img width="64" src="https://raw.githubusercontent.com/eocode/ISO8583-Dlib/master/img/logo.png">
 <h3>ISO8583 Dlib Parser</h3>
 <p>
 Parser String to JSON for ISO8583 Package
@@ -24,7 +24,7 @@ About ISO Links:
 Resume Docs and Parser Example
 
 <div align="center">
-  <img src="https://github.com/eocode/ISO8583-Dlib/tree/master/img/ISO%208583.png">
+  <img src="https://raw.githubusercontent.com/eocode/ISO8583-Dlib/master/img/ISO%208583.png">
 </div>
 
 ## How to Install
